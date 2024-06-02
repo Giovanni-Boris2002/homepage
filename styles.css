@@ -16,6 +16,16 @@ body {
   --text-decoration-color: #ff9a00;
 }
 
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+  --primary-text-color: #ffffff;
+
+}
+
+body.dark-theme .navbar {
+  background-color: #333;
+}
 
 .navbar {
   background-color: #4CAF50;
@@ -46,6 +56,11 @@ body {
 .navbar-menu {
   display: flex;
   gap: 20px;
+}
+
+body.dark-theme .navbar-menu a:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
 .navbar-menu a {
@@ -366,6 +381,12 @@ body {
   text-align: center;
 }
 
+
+body.dark-theme .footer {
+  background-color: #121212;
+}
+
+
 .footer-container {
   display: flex;
   align-items: center;
@@ -422,4 +443,35 @@ body {
       flex-direction: column;
       align-items: center;
   }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 90vh;
+  right: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: #333;
+  color: white;
+}
+
+.theme-toggle:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: white;
+  color: #333;
 }
